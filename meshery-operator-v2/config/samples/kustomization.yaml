@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- meshery_v1alpha1_broker.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

@@ -1,0 +1,23 @@
+# permissions for end users to view brokers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: meshery-operator-v2
+    app.kubernetes.io/managed-by: kustomize
+  name: broker-viewer-role
+rules:
+- apiGroups:
+  - meshery.meshery.layer5.io
+  resources:
+  - brokers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - meshery.meshery.layer5.io
+  resources:
+  - brokers/status
+  verbs:
+  - get
